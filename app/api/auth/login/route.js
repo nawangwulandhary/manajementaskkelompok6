@@ -43,7 +43,7 @@ export async function POST(request) {
 
         response.cookies.set("refresh_token", refreshToken, {
             httpOnly: true,
-            secure: false, // ubah ke true kalau deploy
+            secure: true, 
             path: "/",
             maxAge: 7 * 24 * 60 * 60,
         });
